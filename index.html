@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>cofferun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-order="form">
+                    <div class="form-group">
+                        <label for="coffeeOrder">Coffee Order</label>
+                        <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="size" value="short">
+              Short
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="size" value="tall" checked>
+              Tall
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="size" value="grande">
+              Grande
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+            <input type="radio" name="size" value="liter">
+          LITER A'COFFEE
+        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="flavorShot">Flavor Shot</label>
+                        <select id="flavorShot" class="form-control" name="flavor">
+              <option value="">None</option>
+              <option value="caramel">Caramel</option>
+              <option value="almond">Almond</option>
+              <option value="mocha">Mocha</option>
+            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="strengthLevel">Caffeine Rating</label>
+                        <input name="strength" id="strengthLevel" type="range" value="30">
+                        <div id="slider"></div>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        </div>
+
+        <!--MODAL-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Achievement Unlocked!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please enter your email to use your Achievement</p>
+                            <div class="form-group">
+                                <label for="emailCheck">Email</label>
+                                <input class="form-control" type="email" name="emailAddress" id="emailCheck" value="">
+                            </div>
+                            <form power = "form">
+                            <div class="form-group" id="powerup">
+                                <label for="powerups">Power Ups</label>
+                                <div class="radio">
+                                    <label>
+      <input type="radio" name="powerup" value="cat">
+      Cat-like reflexes
+    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+      <input type="radio" name="powerup" value="rock">
+      Rock-like relfexes
+    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+      <input type="radio" name="powerup" value="pringle">
+      The ability to eat only one pringle when opening a new can.
+    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-default" data-dismiss="modal" id="boost">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/datastore.js" charset="utf-8"></script>
+    <script src="scripts/truck.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>
